@@ -17,4 +17,4 @@ const App = () => {
 };
 
 // insert component's generated HTML into the DOM so user can see on page
-ReactDOM.render(<App />, document.querySelector(".container"));
+ReactDOM.render(<App />, document.getElementById("root"));
