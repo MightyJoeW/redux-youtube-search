@@ -9,6 +9,7 @@ export default class Searchbar extends Component {
             width: "500px"
           }}
           onChange={this.onInputChange}
+          placeholder="search"
         />
       </div>
     );
