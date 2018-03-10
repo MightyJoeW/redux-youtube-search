@@ -7,6 +7,13 @@ import VideoList from "./components/VideoList/VideoList";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
 export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      list: ["Stuff Keyboardists Say", "Mighty Minute", "Kobe Neva Pass"]
+    };
+  }
   render() {
     return (
       <div
@@ -19,7 +26,7 @@ export default class App extends Component {
       >
         <Searchbar />
         <VideoPlayer />
-        <VideoList />
+        <VideoList list={this.state.list} />
       </div>
     );
   }
