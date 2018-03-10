@@ -2,8 +2,14 @@ import React, { Component } from "react";
 export default class Searchbar extends Component {
   render() {
     return (
-      <div>
-        <input onChange={this.onInputChange} />
+      <div style={{ gridColumn: "1 / -1", justifySelf: "center" }}>
+        <input
+          style={{
+            borderRadius: "50px",
+            width: "500px"
+          }}
+          onChange={this.onInputChange}
+        />
       </div>
     );
   }
