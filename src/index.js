@@ -11,7 +11,9 @@ const App = () => {
   return (
     <div>
       <Searchbar />
-      <h1>YouTube</h1>
+      <VideoPlayer />
+      <VideoList />
+      <VideoDetail />
     </div>
   );
 };
