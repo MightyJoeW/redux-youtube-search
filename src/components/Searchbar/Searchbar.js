@@ -1,13 +1,33 @@
 import React, { Component } from "react";
-export default class Searchbar extends Component {
+
+export default class SearchBar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      phrase: ""
+    };
+    this.onInputChange = this.onInputChange.bind(this);
+  }
+
+  onInputChange(e) {
+    this.setState({
+      phrase: e.target.value
+    });
+    console.log(this.state.phrase);
+  }
+
   render() {
     return (
-      <div>
-        <input onChange={this.onInputChange} />
+      <div style={{ gridColumn: "1 / -1", justifySelf: "center" }}>
+        <input
+          value={this.state.phrase}
+          style={{ borderRadius: "50px", width: "500px" }}
+          onChange={this.onInputChange}
+          placeholder="search"
+        />
+        Value of the input: {this.state.phrase}
       </div>
     );
-  }
-  onInputChange(e) {
-    console.log(e.target.value);
   }
 }
