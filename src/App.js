@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // COMPONENTS
-import Searchbar from "./components/Searchbar/Searchbar";
+import SearchBar from "./components/SearchBar/SearchBar";
 import VideoDetail from "./components/VideoDetail/VideoDetail";
 import VideoList from "./components/VideoList/VideoList";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
@@ -24,7 +24,7 @@ export default class App extends Component {
           margin: "2em 3em 0 3em"
         }}
       >
-        <Searchbar />
+        <SearchBar />
         <VideoPlayer />
         <VideoList list={this.state.list} />
       </div>
