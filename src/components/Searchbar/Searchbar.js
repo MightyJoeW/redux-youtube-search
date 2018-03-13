@@ -1,5 +1,7 @@
+// External Dependencies
 import React, { Component } from "react";
 
+// Component Definition
 export default class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -22,11 +24,11 @@ export default class SearchBar extends Component {
       <div style={{ gridColumn: "1 / -1", justifySelf: "center" }}>
         <input
           value={this.state.phrase}
-          style={{ borderRadius: "50px", width: "500px" }}
+          style={{ borderRadius: "50px", marginRight: "10px", width: "500px" }}
           onChange={this.onInputChange}
           placeholder="search"
         />
-        Value of the input: {this.state.phrase}
+         Value of the input: {this.state.phrase}
       </div>
     );
   }

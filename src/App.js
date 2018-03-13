@@ -1,13 +1,15 @@
+// External Dependencies
 import React, { Component } from "react";
 import YTSearch from "youtube-api-search";
-import { API_Key } from "./config";
 
-// COMPONENTS
+// Internal Dependencies
+import { API_Key } from "./config";
 import SearchBar from "./components/SearchBar/SearchBar";
 import VideoDetail from "./components/VideoDetail/VideoDetail";
 import VideoList from "./components/VideoList/VideoList";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
+// Component Definition
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -17,7 +19,6 @@ export default class App extends Component {
     };
 
     YTSearch({ key: API_Key, term: "nba" }, videos => {
-      console.log(videos);
       this.setState({
         videos
       }); // same as this.setState({videos: videos})
@@ -40,3 +41,4 @@ export default class App extends Component {
     );
   }
 }
+

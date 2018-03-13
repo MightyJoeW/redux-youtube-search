@@ -1,12 +1,15 @@
+// External Dependencies
 import React from "react";
 
+// Local Variables
 const listStyle = {};
 
-const VideoListItem = props => {
+// Component Definition
+const VideoListItem = ({video}) => {
+  // ES6 shorthand for taking in props and doing const video = props.video
   return (
-    <div>
-      <li> VideoListItem </li>
-    </div>
+      <li style={listStyle}>
+      </li>
   );
 };
 
