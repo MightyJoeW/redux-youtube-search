@@ -1,6 +1,10 @@
+// External Dependencies
 import React from "react";
+
+// Internal Dependencies
 import VideoDetail from "../VideoDetail/VideoDetail";
 
+// Component Definition
 const VideoPlayer = () => {
   return (
     <div>

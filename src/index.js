@@ -1,6 +1,9 @@
+// External Dependencies
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-// import API_KEY from './config.js';
 
+// Internal Dependencies
+import App from "./App";
+
+// Render App
 ReactDOM.render(<App />, document.getElementById("root"));
