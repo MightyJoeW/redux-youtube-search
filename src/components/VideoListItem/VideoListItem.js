@@ -5,11 +5,11 @@ import React from "react";
 const listStyle = {};
 
 // Component Definition
-const VideoListItem = props => {
+const VideoListItem = ({video}) => {
+  // ES6 shorthand for taking in props and doing const video = props.video
   return (
-    <div>
-      <li> VideoListItem </li>
-    </div>
+      <li style={listStyle}>
+      </li>
   );
 };
 
