@@ -4,9 +4,8 @@ import ReactDOM from "react-dom";
 
 //COMPONENTS
 import Searchbar from "./components/Searchbar/Searchbar";
-import VideoDetail from "./components/Video_Detail/Video_Detail";
+import VideoDetail from "./components/VideoDetail/VideoDetail";
 
-//Create a new component that produces some html
 const App = () => {
   return (
     <div>
@@ -18,5 +17,4 @@ const App = () => {
   );
 };
 
-// insert component's generated HTML into the DOM so user can see on page
 ReactDOM.render(<App />, document.getElementById("root"));
