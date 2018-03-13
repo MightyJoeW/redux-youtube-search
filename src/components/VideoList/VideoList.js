@@ -2,12 +2,11 @@ import React from "react";
 import VideoListItem from "../VideoListItem/VideoListItem";
 
 const VideoList = props => {
-  return (
-    <div>
-      <h1> VideoList </h1>
-      <VideoListItem videos={props.videos} />
-    </div>
-  );
+  const videoItems = props.videos.map(video => {
+    return <VideoListItem video={video} />;
+  });
+
+  return <ul>{videoItems}</ul>;
 };
 
 export default VideoList;

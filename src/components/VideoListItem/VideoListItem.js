@@ -5,8 +5,7 @@ const listStyle = {};
 const VideoListItem = props => {
   return (
     <div>
-      <h3> VideoListItem </h3>
-      <ul>{props.videos.length}</ul>
+      <li> VideoListItem </li>
     </div>
   );
 };
