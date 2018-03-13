@@ -5,7 +5,7 @@ const VideoList = props => {
   return (
     <div>
       <h1> VideoList </h1>
-      <VideoListItem list={props.list} />
+      <VideoListItem videos={props.videos} />
     </div>
   );
 };

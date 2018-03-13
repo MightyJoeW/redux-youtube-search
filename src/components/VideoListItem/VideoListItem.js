@@ -4,9 +4,9 @@ const VideoListItem = props => {
   return (
     <div>
       <h3> VideoListItem </h3>
-      <p> {props.list[0]} </p>
-      <p> {props.list[1]} </p>
-      <p> {props.list[2]} </p>
+      <p> {props.videos[0]} </p>
+      <p> {props.videos[1]} </p>
+      <p> {props.videos[2]} </p>
     </div>
   );
 };

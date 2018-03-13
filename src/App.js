@@ -8,17 +8,20 @@ import VideoDetail from "./components/VideoDetail/VideoDetail";
 import VideoList from "./components/VideoList/VideoList";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
-YTSearch({ key: API_Key, term: "nba" }, function(data) {
-  console.log(data);
-});
-
 export default class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      list: ["Stuff Keyboardists Say", "Mighty Minute", "Kobe Neva Pass"]
+      videos: []
     };
+
+    YTSearch({ key: API_Key, term: "nba" }, videos => {
+      console.log(videos);
+      this.setState({
+        videos
+      }); // same as this.setState({videos: videos})
+    });
   }
   render() {
     return (
@@ -32,7 +35,7 @@ export default class App extends Component {
       >
         <SearchBar />
         <VideoPlayer />
-        <VideoList list={this.state.list} />
+        <VideoList videos={this.state.videos} />
       </div>
     );
   }
