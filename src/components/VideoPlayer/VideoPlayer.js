@@ -1,8 +1,8 @@
 // External Dependencies
-import React from "react";
+import React from 'react';
 
 // Internal Dependencies
-import VideoDetail from "../VideoDetail/VideoDetail";
+import VideoDetail from '../VideoDetail/VideoDetail';
 
 // Component Definition
 const VideoPlayer = () => {
