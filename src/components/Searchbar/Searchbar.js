@@ -1,34 +1,43 @@
 // External Dependencies
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import AutoComplete from 'material-ui/AutoComplete';
 
-// Component Definition
+/**
+ * The input is used to create the `dataSource`, so the input always matches three entries.
+ */
+
+ const styles = {
+  gridColumn: '1 / -1'
+
+ }
+
+ // Component Definition
 export default class SearchBar extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    dataSource: [],
+  };
 
-    this.state = {
-      phrase: ""
-    };
-    this.onInputChange = this.onInputChange.bind(this);
-  }
-
-  onInputChange(e) {
+  handleUpdateInput = (value) => {
     this.setState({
-      phrase: e.target.value
+      dataSource: [
+        value,
+        value + value,
+        value + value + value,
+      ],
     });
-    console.log(this.state.phrase);
-  }
+  };
 
   render() {
     return (
-      <div style={{ gridColumn: "1 / -1", justifySelf: "center" }}>
-        <input
-          value={this.state.phrase}
-          style={{ borderRadius: "50px", marginRight: "10px", width: "500px" }}
-          onChange={this.onInputChange}
-          placeholder="search"
+      <div style={styles}>
+        <AutoComplete
+          animated={true}
+          hintText="Type anything"
+          dataSource={this.state.dataSource}
+          onUpdateInput={this.handleUpdateInput}
+          floatingLabelText="Search Video"
+          fullWidth={true}
         />
-         <p style={{textAlign: "center"}}>Value of the input: {this.state.phrase}</p>
       </div>
     );
   }

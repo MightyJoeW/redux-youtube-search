@@ -1,8 +1,8 @@
 // External Dependencies
-import React from "react";
+import React from 'react';
 
 // Internal Dependencies
-import VideoListItem from "../VideoListItem/VideoListItem";
+import VideoListItem from '../VideoListItem/VideoListItem';
 
 // Component Definition
 const VideoList = props => {
