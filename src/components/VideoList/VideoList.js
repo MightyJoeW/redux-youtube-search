@@ -1,5 +1,6 @@
 // External Dependencies
 import React from 'react';
+import {List} from 'material-ui/List';
 
 // Internal Dependencies
 import VideoListItem from '../VideoListItem/VideoListItem';
@@ -10,7 +11,7 @@ const VideoList = props => {
     return <VideoListItem key={video.etag} video={video} />; //got etag from console. Network, then clicked on the youtube search then items
   });
 
-  return <ul>{videoItems}</ul>;
+  return <List>{videoItems}</List>;
 };
 
 export default VideoList;

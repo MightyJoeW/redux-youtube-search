@@ -1,5 +1,6 @@
 // External Dependencies
 import React from 'react';
+import {ListItem} from 'material-ui/List';
 
 // Local Variables
 const listGroupItem = {};
@@ -11,13 +12,13 @@ const mediaObject = {}
 const VideoListItem = ({video}) => {
   // ES6 shorthand for taking in props and doing const video = props.video
   return (
-      <li style={listGroupItem}>
+      <ListItem style={listGroupItem}>
         <div style={videoList}>
           <div style={mediaLeft}>
             <img style={mediaObject}/>
           </div>
         </div>
-      </li>
+      </ListItem>
   );
 };
 
