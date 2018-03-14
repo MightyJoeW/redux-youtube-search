@@ -1,6 +1,7 @@
 // External Dependencies
 import React, { Component } from "react";
 import YTSearch from "youtube-api-search";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // Internal Dependencies
 import { API_Key } from "./config";
@@ -26,18 +27,20 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div
-        style={{
-          display: "grid",
-          gridGap: "1em",
-          gridTemplateColumns: "2fr 1fr",
-          margin: "2em 3em 0 3em"
-        }}
-      >
-        <SearchBar />
-        <VideoPlayer />
-        <VideoList videos={this.state.videos} />
-      </div>
+      <MuiThemeProvider>
+        <div
+          style={{
+            display: "grid",
+            gridGap: "1em",
+            gridTemplateColumns: "2fr 1fr",
+            margin: "2em 3em 0 3em"
+          }}
+        >
+          <SearchBar />
+          <VideoPlayer />
+          <VideoList videos={this.state.videos} />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }

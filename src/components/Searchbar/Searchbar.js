@@ -28,7 +28,7 @@ export default class SearchBar extends Component {
           onChange={this.onInputChange}
           placeholder="search"
         />
-         Value of the input: {this.state.phrase}
+         <p style={{textAlign: "center"}}>Value of the input: {this.state.phrase}</p>
       </div>
     );
   }
