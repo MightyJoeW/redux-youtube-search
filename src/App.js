@@ -1,8 +1,8 @@
 // External Dependencies
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { MuiThemeProvider as NewMuiThemeProvider, createMuiTheme } from 'material-ui-next/styles';
+import { MuiThemeProvider } from 'material-ui';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 // Internal Dependencies
@@ -11,6 +11,10 @@ import SearchBar from './components/SearchBar/SearchBar';
 import VideoDetail from './components/VideoDetail/VideoDetail';
 import VideoList from './components/VideoList/VideoList';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+
+const themeV1 = createMuiTheme({
+  /* theme for v1 */
+});
 
 // Component Definition
 export default class App extends Component {
@@ -30,20 +34,22 @@ export default class App extends Component {
 
   render() {
     return (
-      <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+      <NewMuiThemeProvider theme={themeV1}>
+        <MuiThemeProvider muiTheme={themeV0}>
         <div
           style={{
             display: 'grid',
             gridGap: '1em',
             gridTemplateColumns: '2fr 1fr',
-            margin: '2em 3em 0 3em'
+            margin: '2em 3em 0 3em',
           }}
         >
           <SearchBar />
           <VideoPlayer />
           <VideoList videos={this.state.videos} />
         </div>
-      </MuiThemeProvider>
+        </MuiThemeProvider>
+      </NewMuiThemeProvider>
     );
   }
 }
