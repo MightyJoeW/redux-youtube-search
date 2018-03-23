@@ -3,9 +3,11 @@ import React from 'react';
 
 // Component Definition
 
-const Searchbar = () => (
+const Searchbar = props => (
   <div>
-    <h2>Searchbar</h2>
+    <form>
+      <input type="text" placeholder="Search" onChange={props.change}></input>
+    </form>
   </div>
 )
 

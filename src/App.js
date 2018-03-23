@@ -28,6 +28,7 @@ export default class App extends Component {
 
     this.state = {
       videos: [],
+      search: null,
     };
 
     YTSearch({ key: API_Key, term: 'nba' }, videos => {
@@ -35,6 +36,16 @@ export default class App extends Component {
         videos
       }); // same as this.setState({videos: videos})
     });
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    e.preventDefault();
+    this.setState({
+      search: e.target.value
+    })
+    console.log(e.target.value);
   }
 
   render() {
@@ -49,7 +60,7 @@ export default class App extends Component {
             margin: '2em 3em 0 3em',
           }}
         >
-            <Searchbar />
+            <Searchbar change={this.handleChange} onChange={this.handleChange}/>
           <VideoPlayer />
           <VideoList videos={this.state.videos} />
         </div>
