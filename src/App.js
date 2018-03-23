@@ -18,7 +18,6 @@ const themeV0 = getMuiTheme({
 
 // Component Definition
 export default class App extends Component {
-  c
 
   render() {
     return (

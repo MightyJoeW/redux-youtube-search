@@ -9,6 +9,7 @@ import VideoDetail from '../components/VideoDetail/VideoDetail';
 import VideoList from '../components/VideoList/VideoList';
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer';
 
+// Component Definition
 export default class componentName extends Component {
     constructor(props) {
         super(props);

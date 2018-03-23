@@ -1,7 +1,10 @@
+// External Dependencies
 import React, { Component } from 'react';
 
+// Internal Dependencies
 import PracticeChild from "./PracticeChild";
 
+// Local Variables
 const styles = {
     border: '1px solid #ddd',
     borderRadius: 5,
@@ -22,6 +25,7 @@ const buttonStyle = {
     border: 'none'
 }
 
+// Component Definition
 export default class Practice extends Component {
     constructor(props) {
         super(props);
@@ -30,7 +34,7 @@ export default class Practice extends Component {
             name: 'Joe',
             nickname: 'The Mighty Joe',
             age: 29,
-            location: 'Frisco',
+            city: 'Frisco',
             intern: true,
             todo: ['onboarding', 'text/email notifications', 'Coder Dojo'],
             food: {
@@ -55,7 +59,7 @@ export default class Practice extends Component {
             name,
             nickname,
             age,
-            location,
+            city,
             intern,
             todo,
             food
@@ -71,7 +75,7 @@ export default class Practice extends Component {
                         <li key={food} style={listItem} onClick={() => console.log('clicked item')}>{food}</li>
                 )}
                 </ul>
-                <PracticeChild location={location}/>
+                <PracticeChild city={city}/>
             </div>
         )
     }

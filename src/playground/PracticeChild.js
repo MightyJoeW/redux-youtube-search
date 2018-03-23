@@ -1,8 +1,10 @@
+// External Dependencies
 import React from 'react'
 
+// Component Definition
 const PracticeChild = props => (
     <div>
-        <p>{props.location}</p>
+        <p>{props.city}</p>
     </div>
 )
 
