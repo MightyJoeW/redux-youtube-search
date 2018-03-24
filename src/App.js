@@ -1,40 +1,24 @@
 // External Dependencies
 import React, { Component } from 'react';
-import YTSearch from 'youtube-api-search';
 import { MuiThemeProvider as NewMuiThemeProvider, createMuiTheme } from 'material-ui-next/styles';
 import { MuiThemeProvider } from 'material-ui';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import FlatButton from 'material-ui/FlatButton'; // v0.x
+import Button from 'material-ui-next/Button'; // v1.x
 
 // Internal Dependencies
-import { API_Key } from './config';
-import SearchBar from './components/SearchBar/SearchBar';
-import VideoDetail from './components/VideoDetail/VideoDetail';
-import VideoList from './components/VideoList/VideoList';
-import VideoPlayer from './components/VideoPlayer/VideoPlayer';
+import router from "./router";
 
+// Local Variables
 const themeV1 = createMuiTheme({
   /* theme for v1 */
 });
-
 const themeV0 = getMuiTheme({
   /* theme v0.x */
 });
 
 // Component Definition
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      videos: [],
-    };
-
-    YTSearch({ key: API_Key, term: 'nba' }, videos => {
-      this.setState({
-        videos
-      }); // same as this.setState({videos: videos})
-    });
-  }
 
   render() {
     return (
@@ -48,9 +32,7 @@ export default class App extends Component {
               margin: '2em 3em 0 3em',
             }}
           >
-            <SearchBar />
-            <VideoPlayer />
-            <VideoList videos={this.state.videos} />
+            {router}
           </div>
         </MuiThemeProvider>
       </NewMuiThemeProvider>
