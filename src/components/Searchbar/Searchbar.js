@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Autosuggest from 'react-autosuggest';
 import match from 'autosuggest-highlight/match';
@@ -141,7 +141,7 @@ const styles = theme => ({
   },
 });
 
-class IntegrationAutosuggest extends React.Component {
+class Searchbar extends Component {
   state = {
     value: '',
     suggestions: [],
@@ -194,8 +194,8 @@ class IntegrationAutosuggest extends React.Component {
   }
 }
 
-IntegrationAutosuggest.propTypes = {
+Searchbar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(IntegrationAutosuggest);
+export default withStyles(styles)(Searchbar);

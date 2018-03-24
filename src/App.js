@@ -16,6 +16,10 @@ const themeV1 = createMuiTheme({
   /* theme for v1 */
 });
 
+const themeV0 = getMuiTheme({
+  /* theme v0.x */
+});
+
 // Component Definition
 export default class App extends Component {
   constructor(props) {
@@ -36,18 +40,18 @@ export default class App extends Component {
     return (
       <NewMuiThemeProvider theme={themeV1}>
         <MuiThemeProvider muiTheme={themeV0}>
-        <div
-          style={{
-            display: 'grid',
-            gridGap: '1em',
-            gridTemplateColumns: '2fr 1fr',
-            margin: '2em 3em 0 3em',
-          }}
-        >
-          <SearchBar />
-          <VideoPlayer />
-          <VideoList videos={this.state.videos} />
-        </div>
+          <div
+            style={{
+              display: 'grid',
+              gridGap: '1em',
+              gridTemplateColumns: '2fr 1fr',
+              margin: '2em 3em 0 3em',
+            }}
+          >
+            <SearchBar />
+            <VideoPlayer />
+            <VideoList videos={this.state.videos} />
+          </div>
         </MuiThemeProvider>
       </NewMuiThemeProvider>
     );

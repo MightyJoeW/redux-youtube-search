@@ -1,6 +1,6 @@
 // External Dependencies
 import React from 'react';
-import {List} from 'material-ui/List';
+import List from 'material-ui/List';
 
 // Internal Dependencies
 import VideoListItem from '../VideoListItem/VideoListItem';
