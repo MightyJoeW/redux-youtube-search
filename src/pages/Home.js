@@ -8,6 +8,15 @@ import VideoDetail from '../components/VideoDetail/VideoDetail';
 import VideoList from '../components/VideoList/VideoList';
 import VideoPlayer from '../components/VideoPlayer/VideoPlayer';
 
+// Local Variables
+const HomeStyles = {
+    display: 'grid',
+    gridGap: '1em',
+    gridTemplateColumns: '2fr 1fr',
+    margin: '2em 3em 0 3em',
+    paddingTop: 64,
+}
+
 // Component Definition
 export default class componentName extends Component {
     constructor(props) {
@@ -28,12 +37,7 @@ export default class componentName extends Component {
     render() {
         return (
             <div
-                style={{
-                    display: 'grid',
-                    gridGap: '1em',
-                    gridTemplateColumns: '2fr 1fr',
-                    margin: '2em 3em 0 3em',
-                }}>
+                style={HomeStyles}>
                 <VideoPlayer />
                 <VideoList videos={this.state.videos} />
             </div>

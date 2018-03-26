@@ -6,7 +6,8 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 
 // Internal Dependencies
-import Searchbar from '../Searchbar/Searchbar'
+import IconSearch from '../Icons/IconSearch';
+import Searchbar from '../Searchbar/Searchbar';
 
 const styles = {
     root: {
@@ -14,17 +15,21 @@ const styles = {
     },
 };
 
+const AppBarStyles = {
+}
+
 function SimpleAppBar(props) {
     const { classes } = props;
     return (
         <div className={classes.root}>
-            <AppBar position="static" color="default">
+            <AppBar style={AppBarStyles} position="fixed" color="primary">
                 <Toolbar>
                     <Typography variant="title" color="inherit">
-                        Title
+                        NBATube
           </Typography>
                 <Searchbar />
                 </Toolbar>
+                <IconSearch />
             </AppBar>
         </div>
     );

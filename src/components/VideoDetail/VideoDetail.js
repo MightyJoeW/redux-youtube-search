@@ -1,5 +1,5 @@
 // External Dependencies
-import React from "react";
+import React from 'react';
 
 // Component Definition
 const VideoDetail = () => {
