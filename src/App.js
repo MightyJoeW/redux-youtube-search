@@ -1,41 +1,24 @@
 // External Dependencies
 import React, { Component } from 'react';
-import { MuiThemeProvider as NewMuiThemeProvider, createMuiTheme } from 'material-ui-next/styles';
-import { MuiThemeProvider } from 'material-ui';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import FlatButton from 'material-ui/FlatButton'; // v0.x
-import Button from 'material-ui-next/Button'; // v1.x
 
 // Internal Dependencies
+import SimpleAppBar from "./components/SimpleAppBar/SimpleAppBar"
 import router from "./router";
 
 // Local Variables
-const themeV1 = createMuiTheme({
-  /* theme for v1 */
-});
-const themeV0 = getMuiTheme({
-  /* theme v0.x */
-});
+const styles = {
+  margin: '0 auto',
+}
 
 // Component Definition
 export default class App extends Component {
 
   render() {
     return (
-      <NewMuiThemeProvider theme={themeV1}>
-        <MuiThemeProvider muiTheme={themeV0}>
-          <div
-            style={{
-              display: 'grid',
-              gridGap: '1em',
-              gridTemplateColumns: '2fr 1fr',
-              margin: '2em 3em 0 3em',
-            }}
-          >
-            {router}
-          </div>
-        </MuiThemeProvider>
-      </NewMuiThemeProvider>
+      <div style={styles}>
+        <SimpleAppBar />
+        {router}
+      </div>
     );
   }
 }
