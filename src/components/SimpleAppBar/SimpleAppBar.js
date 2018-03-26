@@ -5,6 +5,9 @@ import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 
+// Internal Dependencies
+import Searchbar from '../Searchbar/Searchbar'
+
 const styles = {
     root: {
         flexGrow: 1,
@@ -20,6 +23,7 @@ function SimpleAppBar(props) {
                     <Typography variant="title" color="inherit">
                         Title
           </Typography>
+                <Searchbar />
                 </Toolbar>
             </AppBar>
         </div>
