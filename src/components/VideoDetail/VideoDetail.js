@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Component Definition
-const VideoDetail = () => {
+const VideoDetail = ({ video }) => {
   return (
     <div>
       <h2> VideoDetail </h2>
