@@ -26,10 +26,10 @@ function SimpleAppBar(props) {
                 <Toolbar>
                     <Typography variant="title" color="inherit">
                         NBATube
-          </Typography>
-                <Searchbar />
+                    </Typography>
+                    <Searchbar />
+                    <IconSearch />
                 </Toolbar>
-                <IconSearch />
             </AppBar>
         </div>
     );
