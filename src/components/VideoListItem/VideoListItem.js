@@ -3,7 +3,9 @@ import React from 'react';
 import { ListItem } from 'material-ui/List';
 
 // Local Variables
-const listGroupItem ={};
+const listGroupItem ={
+  cursor: 'pointer'
+};
 const videoList = {
   display: 'grid',
   gridTemplateColumns: 'repeat(2, 1fr)'

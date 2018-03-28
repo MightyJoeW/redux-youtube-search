@@ -25,7 +25,7 @@ function SimpleAppBar(props) {
             <AppBar style={AppBarStyles} position="fixed" color="primary">
                 <Toolbar>
                     <Typography variant="title" color="inherit">
-                        NBATube
+                        CeaTube
                     </Typography>
                     <Searchbar />
                     <IconSearch />
