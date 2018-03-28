@@ -9,36 +9,15 @@ import { MenuItem } from 'material-ui/Menu';
 import { withStyles } from 'material-ui/styles';
 
 const suggestions = [
-  { label: 'Atlanta Hawks' },
-  { label: 'Boston Celtics' },
-  { label: 'Brooklyn Nets' },
-  { label: 'Charlotte Hornets' },
-  { label: 'Chicago Bulls' },
-  { label: 'Cleveland Cavaliers' },
-  { label: 'Dallas Mavericks' },
-  { label: 'Denver Nugget' },
-  { label: 'Detroit Pistons' },
-  { label: 'Golden State Warriors' },
-  { label: 'Houston Rockets' },
-  { label: 'Indiana Pacers' },
-  { label: 'Los Angeles Clippers' },
-  { label: 'Los Angeles Lakers' },
-  { label: 'Memphis Grizzlies' },
-  { label: 'Miami Heat' },
-  { label: 'Milwaukee Bucks' },
-  { label: 'Minnesota Timberwolves' },
-  { label: 'New Orleans Pelicans' },
-  { label: 'New York Knicks' },
-  { label: 'Oklahoma City Thunder' },
-  { label: 'Orlando Magic' },
-  { label: 'Philadelphia 76ers' },
-  { label: 'Phoenix Suns' },
-  { label: 'Portland Trail Blazers' },
-  { label: 'Sacramento Kings' },
-  { label: 'San Antonio Spurs' },
-  { label: 'Toronto Raptors' },
-  { label: 'Utah Jazz' },
-  { label: 'Washington Wizards' },
+  { label: 'Call-Em-All' },
+  { label: 'Communicate' },
+  { label: 'Culture' },
+  { label: 'Harlem Shake' },
+  { label: 'Ice Bucket Challenge' },
+  { label: 'School' },
+  { label: 'Staffing' },
+  { label: 'Texting' },
+  { label: 'Text Messaging' },
 ];
 
 function renderInput(inputProps) {
@@ -46,6 +25,7 @@ function renderInput(inputProps) {
 
   return (
     <TextField
+    fullWidth
       InputProps={{
         inputRef: ref,
         classes: {
@@ -116,6 +96,7 @@ function getSuggestions(value) {
 const styles = theme => ({
   container: {
     flexGrow: 1,
+    marginLeft: 50,
     position: 'relative',
     // height: 250,
   },
@@ -180,7 +161,7 @@ class IntegrationAutosuggest extends React.Component {
         renderSuggestion={renderSuggestion}
         inputProps={{
           classes,
-          placeholder: 'Search an NBA team',
+          placeholder: 'Search',
           value: this.state.value,
           onChange: this.handleChange,
         }}

@@ -27,7 +27,7 @@ export default class componentName extends Component {
             search: null,
         };
 
-        YTSearch({ key: API_Key, term: 'nba' }, videos => {
+        YTSearch({ key: API_Key, term: 'call-em-all' }, videos => {
             this.setState({
                 videos
             }); // same as this.setState({videos: videos})
@@ -38,7 +38,7 @@ export default class componentName extends Component {
         return (
             <div
                 style={HomeStyles}>
-                <VideoPlayer />
+                <VideoPlayer videos={this.state.videos}/>
                 <VideoList videos={this.state.videos} />
             </div>
         )
