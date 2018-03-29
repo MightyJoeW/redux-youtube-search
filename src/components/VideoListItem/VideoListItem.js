@@ -7,10 +7,11 @@ const listGroupItem ={
   cursor: 'pointer'
 };
 const videoList = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(2, 1fr)'
+  display: 'flex',
 };
-const mediaLeft = {};
+const mediaLeft = {
+  marginRight: '1em'
+};
 const mediaObject = {};
 const mediaBody = {};
 const mediaHeading = {

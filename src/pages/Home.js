@@ -38,7 +38,7 @@ export default class componentName extends Component {
         return (
             <div
                 style={HomeStyles}>
-                <VideoPlayer videos={this.state.videos}/>
+                <VideoPlayer video={this.state.videos[1]}/>
                 <VideoList videos={this.state.videos} />
             </div>
         )
