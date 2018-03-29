@@ -2,15 +2,21 @@
 import React from 'react';
 
 // Internal Dependencies
+import CircularIndeterminate from '../Icons/Progress';
 import VideoDetail from '../VideoDetail/VideoDetail';
 
 // Component Definition
-const VideoPlayer = props => {
+const VideoPlayer = ({ video }) => {
+  if (!video) {
+    return <CircularIndeterminate />
+  }
+
+  const videoId = video.id.videoId;
+  const url = `https://www.youtube.com/embed/${videoId}`;
   return (
     <div>
-      <h1> VideoPlayer </h1>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/WdTL6eKy3rY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <VideoDetail />
+      <iframe width="560" height="315" src={url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <VideoDetail video={video}/>
     </div>
   );
 };
