@@ -1,7 +1,7 @@
 {
-  "name": "CeaTube",
+  "name": "MuiTube",
   "version": "1.0.0",
-  "description": "YouTube-esque SPA for Call-Em-All Content",
+  "description": "YouTube-esque SPA for Material-UI Content",
   "main": "index.js",
   "repository": "git@github.com:MightyJoeW/redux-youtube-search.git",
   "scripts": {

@@ -10,14 +10,13 @@ import { withStyles } from 'material-ui/styles';
 
 const suggestions = [
   { label: 'Call-Em-All' },
-  { label: 'Communicate' },
-  { label: 'Culture' },
-  { label: 'Harlem Shake' },
-  { label: 'Ice Bucket Challenge' },
-  { label: 'School' },
-  { label: 'Staffing' },
-  { label: 'Texting' },
-  { label: 'Text Messaging' },
+  { label: 'Intro' },
+  { label: 'JSS' },
+  { label: 'Material-UI' },
+  { label: 'Material Design' },
+  { label: 'Mui' },
+  { label: 'React' },
+  { label: 'Theme' },
 ];
 
 function renderInput(inputProps) {
@@ -25,7 +24,7 @@ function renderInput(inputProps) {
 
   return (
     <TextField
-    fullWidth
+      fullWidth
       InputProps={{
         inputRef: ref,
         classes: {

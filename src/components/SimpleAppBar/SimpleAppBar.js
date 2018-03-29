@@ -7,7 +7,7 @@ import Typography from 'material-ui/Typography';
 
 // Internal Dependencies
 import IconSearch from '../Icons/IconSearch';
-import Searchbar from '../Searchbar/Searchbar';
+import SearchBar from '../SearchBar/SearchBar';
 
 const styles = {
     root: {
@@ -25,9 +25,9 @@ function SimpleAppBar(props) {
             <AppBar style={AppBarStyles} position="fixed" color="primary">
                 <Toolbar>
                     <Typography variant="title" color="inherit">
-                        CeaTube
+                        MuiTube
                     </Typography>
-                    <Searchbar />
+                    <SearchBar />
                     <IconSearch />
                 </Toolbar>
             </AppBar>

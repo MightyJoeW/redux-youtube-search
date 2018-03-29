@@ -7,8 +7,17 @@ import VideoListItem from '../VideoListItem/VideoListItem';
 
 // Component Definition
 const VideoList = props => {
-  const videoItems = props.videos.map(video => {
-    return <VideoListItem key={video.etag} video={video}/>; //got etag from console. Network, then clicked on the youtube search then items
+  //Destructured props
+  const { onVideoSelect, videos } = props;
+
+  const videoItems = videos.map(video => {
+    return (
+      <VideoListItem
+        key={video.etag}
+        onVideoSelect={onVideoSelect}
+        video={video}
+      /> //got etag from console. Network, then clicked on the youtube search then items
+    )
   });
 
   return <List>{videoItems}</List>;

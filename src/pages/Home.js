@@ -18,28 +18,41 @@ const HomeStyles = {
 }
 
 // Component Definition
-export default class componentName extends Component {
+export default class Home extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            videos: [],
+            selectedVideo: null,
             search: null,
+            videos: []
         };
 
-        YTSearch({ key: API_Key, term: 'call-em-all' }, videos => {
+        YTSearch({ key: API_Key, term: 'material-ui' }, videos => {
             this.setState({
-                videos
+                selectedVideo: videos[0],
+                videos: videos,
+
             }); // same as this.setState({videos: videos})
         });
+        this.onVideoSelect = this.onVideoSelect.bind(this);
+    }
+
+    onVideoSelect(selectedVideo) {
+        this.setState({
+            selectedVideo
+        })
     }
 
     render() {
+        const { selectedVideo, videos } = this.state;
         return (
             <div
                 style={HomeStyles}>
-                <VideoPlayer video={this.state.videos[1]}/>
-                <VideoList videos={this.state.videos} />
+                <VideoPlayer video={selectedVideo} />
+                <VideoList
+                    onVideoSelect={this.onVideoSelect}
+                    videos={videos} />
             </div>
         )
     }
