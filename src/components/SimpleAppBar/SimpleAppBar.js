@@ -10,6 +10,7 @@ import MenuIcon from 'material-ui-icons/Menu';
 // Internal Dependencies
 import IconSearch from '../Icons/IconSearch';
 import SearchBar from '../SearchBar/SearchBar';
+import SideNav from '../SideNav/SideNav';
 
 const styles = {
     root: {
@@ -24,17 +25,14 @@ const styles = {
     },
 };
 
-const AppBarStyles = {
-}
-
 function SimpleAppBar(props) {
     const { classes } = props;
     return (
         <div className={classes.root}>
-            <AppBar style={AppBarStyles} position="fixed" color="primary">
+            <AppBar position="fixed" color="primary">
                 <Toolbar>
                     <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                        <MenuIcon />
+                        <MenuIcon onClick={() => console.log('clicked me')}/>
                     </IconButton>
                     <Typography variant="title" color="inherit">
                         MuiTube
@@ -43,6 +41,7 @@ function SimpleAppBar(props) {
                     <IconSearch />
                 </Toolbar>
             </AppBar>
+            <SideNav />
         </div>
     );
 }
