@@ -1,5 +1,6 @@
 // External Dependencies
 import React from 'react';
+import Divider from 'material-ui/Divider';
 
 // Local Variables
 const details = {
@@ -8,21 +9,23 @@ const details = {
   width: 640
 }
 const description = {
-  padding: '10px 0'
+  padding: '12px 0'
 }
 const title = {
   fontSize: '1.2em',
   fontWeight: 700,
+  marginBottom: 10
 }
 
 // Component Definition
 const VideoDetail = ({ video }) => {
+  console.log(video);
   return (
     <div style={details}>
       <div style={title}>{video.snippet.title}</div>
-      <hr />
+      <Divider />
       <div style={description}>{video.snippet.description}</div>
-      <hr />
+      <Divider />
     </div>
   );
 };
