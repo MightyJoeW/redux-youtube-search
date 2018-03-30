@@ -33,7 +33,7 @@ const VideoListItem = props => {
   const title = video.snippet.title;
 
   return (
-    <ListItem style={listGroupItem} onClick={() => onVideoSelect(video)}>
+    <ListItem className="listGroupItem" style={listGroupItem} onClick={() => onVideoSelect(video)}>
       <div style={videoList}>
         <div style={mediaLeft}>
           <img style={mediaObject} src={imageUrl} />
