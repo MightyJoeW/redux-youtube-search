@@ -10,7 +10,6 @@ import MenuIcon from 'material-ui-icons/Menu';
 // Internal Dependencies
 import IconSearch from '../Icons/IconSearch';
 import SearchBar from '../SearchBar/SearchBar';
-import SideNav from '../SideNav/SideNav';
 
 const styles = {
     root: {
@@ -41,7 +40,6 @@ function SimpleAppBar(props) {
                     <IconSearch />
                 </Toolbar>
             </AppBar>
-            <SideNav />
         </div>
     );
 }
