@@ -5,7 +5,7 @@ import Drawer from 'material-ui/Drawer';
 import Button from 'material-ui/Button';
 import List from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import { mailFolderListItems, otherMailFolderListItems } from './tileData';
+import { internalListItems, externalListItems } from './tileData';
 
 const styles = {
     list: {
@@ -32,17 +32,17 @@ class SideNav extends Component {
 
         const sideList = (
             <div className={classes.list}>
-                <List>{mailFolderListItems}</List>
+                <List>{internalListItems}</List>
                 <Divider />
-                <List>{otherMailFolderListItems}</List>
+                <List>{externalListItems}</List>
             </div>
         );
 
         const fullList = (
             <div className={classes.fullList}>
-                <List>{mailFolderListItems}</List>
+                <List>{internalListItems}</List>
                 <Divider />
-                <List>{otherMailFolderListItems}</List>
+                <List>{externalListItems}</List>
             </div>
         );
 
