@@ -14,6 +14,10 @@ const listStyles = {
     textDecoration: 'none'
 }
 
+const anchorStyles = {
+    textDecoration: 'none'
+}
+
 export const internalListItems = (
     <div>
         <ListItem button>
@@ -53,23 +57,23 @@ export const internalListItems = (
 
 export const externalListItems = (
     <div>
-        <ListItem button>
+        <ListItem button href="https://material-ui-next.com/">
             <ListItemIcon>
                 <DocsIcon />
             </ListItemIcon>
-            <ListItemText primary="Docs" />
+            <a style={anchorStyles} className="anchorStyles" href="https://material-ui-next.com/" target="_blank">Docs</a>
         </ListItem>
         <ListItem button>
             <ListItemIcon>
                 <ErrorIcon />
             </ListItemIcon>
-            <ListItemText primary="Issues" />
+            <a style={anchorStyles} className="anchorStyles" href="https://github.com/mui-org/material-ui/issues" target="_blank">Issues</a>
         </ListItem>
         <ListItem button>
             <ListItemIcon>
                 <QuestionIcon />
             </ListItemIcon>
-            <ListItemText primary="Questions" />
+            <a style={anchorStyles} className="anchorStyles" href="https://stackoverflow.com/questions/tagged/material-ui" target="_blank">Questions</a>
         </ListItem>
     </div>
 )

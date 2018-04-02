@@ -6,7 +6,11 @@ body {
     line-height: 1.5;
 }
 
-.listGroupItem:hover {
-    background-color: #eee;
+.anchorStyles:visited {
+    color: #000;
+    text-decoration: none;
+}
 
+.listGroupItem:hover {
+    background-color: #1F1F1F;
 }
