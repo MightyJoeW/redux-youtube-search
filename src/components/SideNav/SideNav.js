@@ -104,3 +104,7 @@ SideNav.propTypes = {
 };
 
 export default withStyles(drawerStyles)(SideNav);
+
+// Functionality for SearchBar with state from Home.js (unable to easily pass props from Home to SideNav since SideNav is in router.js. Will handle with Redux)
+
+{/* <SearchBar onSearchTermChange={term => thisvideoSearch(term)} /> */}

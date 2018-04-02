@@ -27,15 +27,8 @@ export default class Home extends Component {
             search: null,
             videos: []
         };
-
-        YTSearch({ key: API_Key, term: 'material-ui' }, videos => {
-            this.setState({
-                selectedVideo: videos[0],
-                videos: videos,
-
-            }); // same as this.setState({videos: videos})
-        });
         this.onVideoSelect = this.onVideoSelect.bind(this);
+        this.videoSearch('material-ui');
     }
 
     onVideoSelect(selectedVideo) {
@@ -44,11 +37,19 @@ export default class Home extends Component {
         })
     }
 
+    videoSearch(term) {
+        YTSearch({ key: API_Key, term: term }, videos => {
+            this.setState({
+                selectedVideo: videos[0],
+                videos
+            }); // same as this.setState({videos: videos})
+        });
+    }
+
     render() {
         const { selectedVideo, videos } = this.state;
         return (
-            <div
-                style={HomeStyles}>
+            <div style={HomeStyles}>
                 <VideoPlayer video={selectedVideo} />
                 <VideoList
                     onVideoSelect={this.onVideoSelect}

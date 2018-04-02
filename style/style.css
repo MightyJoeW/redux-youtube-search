@@ -7,10 +7,10 @@ body {
 }
 
 .anchorStyles:visited {
-    color: #000;
+    color: #1F1F1F;
     text-decoration: none;
 }
 
 .listGroupItem:hover {
-    background-color: #1F1F1F;
+    background-color: #eee;
 }

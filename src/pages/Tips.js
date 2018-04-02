@@ -12,4 +12,4 @@ const styles = {
   )
 }
 
-export default Tips
+export default Tips;

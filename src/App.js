@@ -6,8 +6,6 @@ import CssBaseline from 'material-ui/CssBaseline';
 import router from './router';
 import SideNav from './components/SideNav/SideNav';
 
-// Local Variables
-
 // Component Definition
 export default class App extends Component {
 
