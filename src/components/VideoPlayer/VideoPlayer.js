@@ -4,7 +4,6 @@ import React from 'react';
 // Internal Dependencies
 import CircularIndeterminate from '../Icons/Progress';
 import VideoDetail from '../VideoDetail/VideoDetail';
-import SideNav from '../SideNav/SideNav';
 
 // Local Variables
 const styles = {
@@ -22,7 +21,6 @@ const VideoPlayer = ({ video }) => {
   const url = `https://www.youtube.com/embed/${videoId}`;
   return (
     <div style={styles}>
-    <SideNav />
       <iframe style={{ margin: '0 auto' }} width="640" height="360" src={url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <VideoDetail video={video} />
     </div>

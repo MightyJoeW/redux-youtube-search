@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import CssBaseline from 'material-ui/CssBaseline';
 
 // Internal Dependencies
-import SimpleAppBar from "./components/SimpleAppBar/SimpleAppBar"
-import router from "./router";
+import router from './router';
+import SideNav from './components/SideNav/SideNav';
 
 // Local Variables
 
@@ -14,8 +14,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <SideNav />
         <CssBaseline />
-        <SimpleAppBar />
         {router}
       </div>
     );
