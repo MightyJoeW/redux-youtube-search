@@ -1,6 +1,7 @@
+// External Dependencies
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-
 import ArticleIcon from 'material-ui-icons/Librarybooks';
 import DocsIcon from 'material-ui-icons/Chromereadermode';
 import ErrorIcon from 'material-ui-icons/Error';
@@ -9,31 +10,43 @@ import QuestionIcon from 'material-ui-icons/Questionanswer';
 import TipsIcon from 'material-ui-icons/Lightbulboutline';
 import VideoIcon from 'material-ui-icons/Ondemandvideo';
 
+const listStyles = {
+    textDecoration: 'none'
+}
+
 export const internalListItems = (
     <div>
         <ListItem button>
             <ListItemIcon>
                 <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary="Home" />
+            <Link style={listStyles} to='/'>
+                <ListItemText primary="Home" />
+            </Link>
         </ListItem>
         <ListItem button>
             <ListItemIcon>
                 <VideoIcon />
             </ListItemIcon>
-            <ListItemText primary="Videos" />
+            <Link style={listStyles} to='/videos'>
+                <ListItemText primary="Videos" />
+            </Link>
         </ListItem>
         <ListItem button>
             <ListItemIcon>
                 <ArticleIcon />
             </ListItemIcon>
-            <ListItemText primary="Articles" />
+            <Link style={listStyles} to='/articles'>
+                <ListItemText primary="Articles" />
+            </Link>
         </ListItem>
         <ListItem button>
             <ListItemIcon>
                 <TipsIcon />
             </ListItemIcon>
-            <ListItemText primary="Tips" />
+            <Link style={listStyles} to='/tips'>
+                <ListItemText primary="Tips" />
+            </Link>
         </ListItem>
     </div>
 );
