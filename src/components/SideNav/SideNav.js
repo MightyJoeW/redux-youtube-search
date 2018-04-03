@@ -80,8 +80,8 @@ class SideNav extends Component {
                         <Typography variant="title" color="inherit">
                             MuiTube
                     </Typography>
-                        <SearchBar />
-                        <IconSearch />
+                        <SearchBar onSearchTermChange={this.props.onSearchTermChange}/>
+                        <IconSearch style={{}}/>
                     </Toolbar>
                 </AppBar>
                 <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
@@ -105,6 +105,6 @@ SideNav.propTypes = {
 
 export default withStyles(drawerStyles)(SideNav);
 
-// Functionality for SearchBar with state from Home.js (unable to easily pass props from Home to SideNav since SideNav is in router.js. Will handle with Redux)
+// Functionality for SearchBar with state from Home.js (unable to easily pass props from Home to SideNav since SideNav is in router.js.)
 
 {/* <SearchBar onSearchTermChange={term => thisvideoSearch(term)} /> */}

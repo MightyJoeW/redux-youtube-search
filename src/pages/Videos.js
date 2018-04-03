@@ -1,4 +1,5 @@
 import React from 'react'
+import SideNav from '../components/SideNav/SideNav';
 
 const styles = {
     paddingTop: 64
@@ -7,6 +8,7 @@ const styles = {
 const Videos = () => {
     return (
         <div style={styles}>
+            <SideNav />
             <h1>Videos</h1>
         </div>
     )
