@@ -1,6 +1,6 @@
 {
   "name": "mui-tube",
-  "version": "1.0.0",
+  "version": "0.10.0",
   "description": "YouTube-esque SPA for Material-UI Content",
   "main": "index.js",
   "repository": "git@github.com:MightyJoeW/redux-youtube-search.git",
